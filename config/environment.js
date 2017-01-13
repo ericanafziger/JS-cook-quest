@@ -1,3 +1,7 @@
+var apiKey = require("./apikey.js");
+var authDomain = require("./apikey.js");
+var databaseURL = require("./apikey.js");
+var storageBucket = require("./apikey.js");
 /* jshint node: true */
 
 module.exports = function(environment) {
@@ -14,11 +18,11 @@ module.exports = function(environment) {
     },
 
     firebase: {
-      apiKey: "AIzaSyCEtBGUDmy1bWPYnKGn7lFyB2KX9a8ws34",
+      apiKey,
       authDomain: "q-and-a-ca85f.firebaseapp.com",
       databaseURL: "https://q-and-a-ca85f.firebaseio.com",
       storageBucket: "q-and-a-ca85f.appspot.com"
-   },
+    },
 
     APP: {
       // Here you can pass flags/options to your application instance

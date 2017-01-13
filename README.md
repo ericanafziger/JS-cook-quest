@@ -1,7 +1,7 @@
-# Q-
+# CookQuest
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+#Description
+This app hosts questions and answers on cooking related topics. Users can answer previously posted questions or post questions of their own.
 
 ## Prerequisites
 
@@ -16,9 +16,18 @@ You will need the following things properly installed on your computer.
 ## Installation
 
 * `git clone <repository-url>` this repository
-* `cd q-`
+* `cd JS-cook-quest`
 * `npm install`
 * `bower install`
+* create apiKey.js file within the config folder
+* Put the following into the apiKey.js file:
+  exports.apiKey = {
+    apiKey: "Your API Key Here",
+}
+* Create an account with firebase.google.com and create new project
+* Select the add firebase to your web app button to view your API key and replace it in the exports file.
+* Also replace authDomain, databaseURL, and storageBucket info in the environment.js file. 
+
 
 ## Running / Development
 
@@ -50,4 +59,3 @@ Specify what it takes to deploy your app.
 * Development Browser Extensions
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
-
