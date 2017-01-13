@@ -16,6 +16,11 @@ export default Ember.Component.extend({
       };
       this.set('editAnswerForm', false);
       this.sendAction('saveAnswerEdit', answer, params);
+    },
+    deleteAnswer(answer) {
+      if(confirm("Are you sure you want to delete this answer? Once it is deleted it cannot be undone.")) {
+        this.sendAction('deleteAnswer', answer);
+      }
     }
   }
 });

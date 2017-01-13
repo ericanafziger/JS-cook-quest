@@ -1,15 +1,15 @@
+<!--nested in question-->
 <h4>{{answer.author}}'s Answer:</h4>
 <p>{{answer.content}}</p>
 {{#if editAnswerForm}}
   <form>
-    <label for="author">Author</label>
-    {{input value=answer.author id="author"}}
+    {{input value=answer.author id="author" placeholder="Your Name"}}
 
-    <label for="content">Answer</label>
-    {{input value=answer.content id="content"}}
+    {{input value=answer.content id="content" placeholder="Your Answer"}}
 
     <button type="button" {{action 'saveAnswerEdit' answer}}>Save Changes</button>
     <button type="button" {{action 'cancel'}}>Cancel</button>
+    <button type="button" {{action 'deleteAnswer' answer}}>Delete Answer</button>
 
   </form>
 {{else}}

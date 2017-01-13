@@ -11,7 +11,7 @@
   <h1>Answers</h1>
     {{#each model.answers as |answer|}}
     <div class="answer-tile">
-    {{answer-tile saveAnswerEdit="saveAnswerEdit" answer=answer}}
+    {{answer-tile saveAnswerEdit="saveAnswerEdit" deleteAnswer="deleteAnswer" answer=answer}}
   </div>
     {{/each}}
   {{new-answer saveAnswer="saveAnswer" question=model}}
