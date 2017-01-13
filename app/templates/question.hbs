@@ -1,11 +1,16 @@
-<hr>
-<h2>{{model.content}}</h2>
-<h3>{{model.notes}}</h3>
-<p>- {{model.author}}</p>
-{{edit-question saveEdit="saveEdit" question=model}}
-<hr>
-<h1>Answers</h1>
-{{#each model.answers as |answer|}}
+<div class="details">
+  <div class="text">
+    <h2>{{model.content}}</h2>
+    <h3>{{model.notes}}</h3>
+    <p>- {{model.author}}</p>
+    {{edit-question saveEdit="saveEdit" question=model}}
+  </div>
+</div>
+
+<div class="answers">
+  <h1>Answers</h1>
+  {{#each model.answers as |answer|}}
   {{answer-tile saveAnswerEdit="saveAnswerEdit" answer=answer}}
-{{/each}}
-{{new-answer saveAnswer="saveAnswer" question=model}}
+  {{/each}}
+  {{new-answer saveAnswer="saveAnswer" question=model}}
+</div>

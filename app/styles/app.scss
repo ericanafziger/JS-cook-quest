@@ -91,6 +91,7 @@ nav {
 .questions {
   background: url('http://www.animalhi.com/download/view?resolution=1440x900&file=MTYwMHgxMjAwLzIwMTIxMTIzL2Zvb2QgZmlzaCBjb29raW5nIG1vcnRhciBzcGljZXMgY3JheWZpc2ggMTYwMHgxMjAwIHdhbGxwYXBlcl93d3cuYW5pbWFsaGkuY29tXzg1LmpwZw==&name=Zm9vZF9maXNoX2Nvb2tpbmdfbW9ydGFyX3NwaWNlc19jcmF5ZmlzaF8xNjAweDEyMDBfd2FsbHBhcGVy');
   width: 60%;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 80px;
   justify-content: flex-start;
@@ -106,9 +107,17 @@ nav {
     height: 200px;
     h3 {
       font-size: 1.4em;
+      &:hover {
+        cursor: pointer;
+        color: rgb(49, 44, 54);
+      }
     }
     p {
       margin-top: 20px;
+      &:hover {
+        cursor: pointer;
+        color: rgb(49, 44, 54);
+      }
     }
   }
 }
@@ -116,21 +125,6 @@ nav {
   width: 100%;
   padding: 20px;
   margin-bottom: 80px;
-  button {
-    display: block;
-    margin: 5px auto;
-    padding: 10px 15px;
-    font-size: 1.2em;
-    width: 20%;
-    outline: none;
-    border-radius: 5px;
-    border: none;
-    color: white;
-    background: black;
-    &:hover {
-      cursor: pointer;
-    }
-  }
   textarea,input {
     margin: 20px auto;
     display: block;
@@ -140,5 +134,41 @@ nav {
   }
   textarea {
     height: 100px;
+  }
+}
+.details {
+  margin-bottom: 80px;
+  .text {
+    background: rgb(208, 221, 172);
+    border-radius: 0 0 20px 20px;
+    width: 60%;
+    margin: 0 auto;
+    padding: 15% 4% 6% 4%;
+    h2 {
+      font-family: 'Expletus Sans', cursive;
+      font-size: 2em;
+      padding: 5px 0;
+    }
+    h3,p {
+      padding: 10px 0;
+    }
+    button {
+      width: 40%;
+    }
+  }
+}
+button {
+  display: block;
+  margin: 5px auto;
+  padding: 10px 15px;
+  font-size: 1.2em;
+  width: 20%;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  background: black;
+  &:hover {
+    cursor: pointer;
   }
 }
