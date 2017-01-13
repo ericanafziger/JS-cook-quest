@@ -17,7 +17,9 @@ a {
   }
 }
 nav {
+  position: fixed;
   background: black;
+  width: 100%;
   height: 60px;
   display: flex;
   align-items: center;
@@ -73,10 +75,70 @@ nav {
 
     }
   }
-  #content {
+  #page-content {
     height: 100vh;
     a {
       color: black;
     }
+    h1 {
+      font-family: 'Expletus Sans', cursive;
+      text-align: center;
+      font-size: 4em;
+      padding: 100px 50px 50px 50px;
+    }
+  }
+}
+.questions {
+  background: url('http://www.animalhi.com/download/view?resolution=1440x900&file=MTYwMHgxMjAwLzIwMTIxMTIzL2Zvb2QgZmlzaCBjb29raW5nIG1vcnRhciBzcGljZXMgY3JheWZpc2ggMTYwMHgxMjAwIHdhbGxwYXBlcl93d3cuYW5pbWFsaGkuY29tXzg1LmpwZw==&name=Zm9vZF9maXNoX2Nvb2tpbmdfbW9ydGFyX3NwaWNlc19jcmF5ZmlzaF8xNjAweDEyMDBfd2FsbHBhcGVy');
+  width: 60%;
+  margin: 0 auto;
+  padding: 80px;
+  justify-content: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 20px;
+  .question-tile {
+    background: transparentize($white, 0.3);
+    border-radius: 20px;
+    margin: 1%;
+    padding: 30px;
+    width: 48%;
+    height: 200px;
+    h3 {
+      font-size: 1.4em;
+    }
+    p {
+      margin-top: 20px;
+    }
+  }
+}
+.question-form {
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 80px;
+  button {
+    display: block;
+    margin: 5px auto;
+    padding: 10px 15px;
+    font-size: 1.2em;
+    width: 20%;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background: black;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  textarea,input {
+    margin: 20px auto;
+    display: block;
+    width: 40%;
+    height: 2em;
+    font-size: 1em;
+  }
+  textarea {
+    height: 100px;
   }
 }

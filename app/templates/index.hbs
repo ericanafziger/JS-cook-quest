@@ -1,7 +1,11 @@
-{{#each model.questions as |question|}}
+<h1>Popular Questions</h1>
+<div class="questions">
+  {{#each model.questions as |question|}}
   <div class="question-tile">
     {{question-tile question=question}}
   </div>
 {{/each}}
-
-{{new-question saveQuestion="saveQuestion"}}
+</div>
+<div class="question-form">
+  {{new-question saveQuestion="saveQuestion"}}
+</div>
