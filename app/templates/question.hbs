@@ -4,4 +4,8 @@
 <p>- {{model.author}}</p>
 <hr>
 <h4>Answers</h4>
-<button {{action 'addAnswer'}} type="button">Add Answer</button>
+{{#each model.answers as |answer|}}
+<p>{{answer.author}}'s Answer</p>
+<h4>{{answer.content}}</h4>
+{{/each}}
+{{new-answer saveAnswer="saveAnswer" question=model}}

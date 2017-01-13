@@ -3,9 +3,4 @@
     {{question-tile question=question}}
   </div>
 {{/each}}
-
-{{#each model.answers as |answer|}}
-  <div class="answer-tile">
-    {{answer.content}}
-  </div>
-{{/each}}
+<button {{action 'addQuestion'}} type="button">Add Question</button>
