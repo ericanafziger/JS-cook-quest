@@ -1,4 +1,7 @@
-var apiKey = require("./apikey.js");
+var firebase = require("./apikey.js");
+var apiKey = firebase.apiKey;
+var authDomain = firebase.authDomain;
+var storageBucket = firebase.storageBucket;
 /* jshint node: true */
 
 module.exports = function(environment) {
@@ -16,9 +19,9 @@ module.exports = function(environment) {
 
     firebase: {
       apiKey,
-      authDomain: "q-and-a-ca85f.firebaseapp.com",
+      authDomain,
       databaseURL: "https://q-and-a-ca85f.firebaseio.com",
-      storageBucket: "q-and-a-ca85f.appspot.com"
+      storageBucket
     },
 
     APP: {
