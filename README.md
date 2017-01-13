@@ -21,14 +21,14 @@ You will need the following things properly installed on your computer.
 * `bower install`
 * create apiKey.js file within the config folder
 * Put the following into the apiKey.js file:
-  exports.firebase = {
-    var apiKey = "YOUR API KEY HERE";
-    var authDomain = "YOUR AUTHDOMAIN HERE";
-    var storageBucket = "YOUR STORAGEBUCKET HERE";
+* exports.firebase = {
+    apiKey: "YOUR API KEY HERE",
+    authDomain: "YOUR AUTHDOMAIN HERE",
+    storageBucket: "YOUR STORAGEBUCKET HERE",
 }
 * Create an account with firebase.google.com and create new project
 * Select the "add firebase to your web app" button to view the above variables and replace them with your own ones generated from firebase.
-* Also replace the databaseURL within the firebase section of the environment.js file.
+* Also replace the databaseURL within the firebase section of the config/environment.js file.
 
 
 ## Running / Development
