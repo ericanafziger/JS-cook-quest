@@ -1,0 +1,13 @@
+<div id="page-content">
+  <h1>All Questions</h1>
+  <div class="questions">
+    {{#each model.questions as |question|}}
+    <div class="question-tile">
+      {{question-tile question=question}}
+    </div>
+    {{/each}}
+  </div>
+  <div class="question-form">
+    {{new-question saveQuestion="saveQuestion"}}
+  </div>
+</div>
