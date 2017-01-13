@@ -1,0 +1,18 @@
+<p>{{answer.author}}'s Answer</p>
+<h4>{{answer.content}}</h4>
+{{#if editAnswerForm}}
+  <form>
+    <label for="author">Author</label>
+    {{input value=answer.author id="author"}}
+
+    <label for="content">Answer</label>
+    {{input value=answer.content id="content"}}
+
+    <button type="button" {{action 'saveAnswerEdit' answer}}>Save Changes</button>
+    <button type="button" {{action 'cancel'}}>Cancel</button>
+
+  </form>
+{{else}}
+<button type="button" {{action 'editAnswer' answer}}>Edit Answer</button>
+{{/if}}
+<hr>

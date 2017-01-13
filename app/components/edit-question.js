@@ -7,7 +7,6 @@ export default Ember.Component.extend({
       this.set('editQuestion', true);
     },
     saveEdit(question) {
-      debugger;
       var params = {
         author: this.get('question.author'),
         content: this.get('question.content'),

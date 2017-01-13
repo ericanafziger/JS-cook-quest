@@ -12,7 +12,7 @@ export default Ember.Route.extend({
       newAnswer.save().then(function() {
         return question.save();
       });
-      this.transitionTo('question', question);
+      this.transitionTo('question');
     },
     saveEdit(question, params) {
       Object.keys(params).forEach(function(key) {
@@ -21,7 +21,16 @@ export default Ember.Route.extend({
         }
       });
       question.save();
-      this.transitionTo('question', question);
+      this.transitionTo('question');
+    },
+    saveAnswerEdit(answer, params) {
+      Object.keys(params).forEach(function(key) {
+        if(params[key]!==undefined) {
+          answer.set(key,params[key]);
+        }
+      });
+      answer.save();
+      this.transitionTo('question');
     }
   }
 });

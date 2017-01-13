@@ -7,7 +7,6 @@ export default Ember.Component.extend({
       this.set('addNewQuestion', true);
     },
     saveQuestion() {
-      debugger;
       var params = {
         author: this.get('author'),
         content: this.get('content'),

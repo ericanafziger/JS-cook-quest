@@ -4,9 +4,8 @@
 <p>- {{model.author}}</p>
 {{edit-question saveEdit="saveEdit" question=model}}
 <hr>
-<h4>Answers</h4>
+<h1>Answers</h1>
 {{#each model.answers as |answer|}}
-<p>{{answer.author}}'s Answer</p>
-<h4>{{answer.content}}</h4>
+  {{answer-tile saveAnswerEdit="saveAnswerEdit" answer=answer}}
 {{/each}}
 {{new-answer saveAnswer="saveAnswer" question=model}}
