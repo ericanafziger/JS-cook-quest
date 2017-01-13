@@ -2,6 +2,7 @@
 <h2>{{model.content}}</h2>
 <h3>{{model.notes}}</h3>
 <p>- {{model.author}}</p>
+{{edit-question saveEdit="saveEdit" question=model}}
 <hr>
 <h4>Answers</h4>
 {{#each model.answers as |answer|}}

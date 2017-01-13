@@ -1,7 +1,4 @@
 var apiKey = require("./apikey.js");
-var authDomain = require("./apikey.js");
-var databaseURL = require("./apikey.js");
-var storageBucket = require("./apikey.js");
 /* jshint node: true */
 
 module.exports = function(environment) {
