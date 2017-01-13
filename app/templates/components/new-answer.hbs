@@ -1,16 +1,17 @@
 {{#if addNewAnswer}}
-<h1>Your Answer</h1>
+<h2>Your Answer</h2>
   <div>
     <form>
       <div class="form-group">
-        <label for="author">Author</label>
-        {{input value=author id="author"}}
+        {{input value=author id="author" placeholder="Your Name"}}
       </div>
       <div class="form-group">
-        <label for="content">Answer</label>
-        {{input value=content id="content"}}
+        {{input value=content id="content" placeholder="Your Answer"}}
       </div>
-      <button {{action 'saveAnswer'}}>Save</button>
+      <div class="buttons">
+        <button {{action 'saveAnswer'}}>Save</button>
+        <button {{action 'cancel'}}>Cancel</button>
+      </div>
     </form>
   </div>
 {{else}}

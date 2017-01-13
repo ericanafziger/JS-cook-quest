@@ -1,6 +1,7 @@
 //variables //
 $red: #CD0405;
 $white: white;
+$light-green: rgb(208, 221, 172);
 @import url('https://fonts.googleapis.com/css?family=Expletus+Sans');
 
 * {
@@ -81,9 +82,6 @@ nav {
       color: black;
     }
     h1 {
-      font-family: 'Expletus Sans', cursive;
-      text-align: center;
-      font-size: 4em;
       padding: 100px 50px 50px 50px;
     }
   }
@@ -92,6 +90,8 @@ nav {
   background: url('http://www.animalhi.com/download/view?resolution=1440x900&file=MTYwMHgxMjAwLzIwMTIxMTIzL2Zvb2QgZmlzaCBjb29raW5nIG1vcnRhciBzcGljZXMgY3JheWZpc2ggMTYwMHgxMjAwIHdhbGxwYXBlcl93d3cuYW5pbWFsaGkuY29tXzg1LmpwZw==&name=Zm9vZF9maXNoX2Nvb2tpbmdfbW9ydGFyX3NwaWNlc19jcmF5ZmlzaF8xNjAweDEyMDBfd2FsbHBhcGVy');
   width: 60%;
   max-width: 1200px;
+  max-height: 1000px;
+  overflow: auto;
   margin: 0 auto;
   padding: 80px;
   justify-content: flex-start;
@@ -125,21 +125,11 @@ nav {
   width: 100%;
   padding: 20px;
   margin-bottom: 80px;
-  textarea,input {
-    margin: 20px auto;
-    display: block;
-    width: 40%;
-    height: 2em;
-    font-size: 1em;
-  }
-  textarea {
-    height: 100px;
-  }
 }
 .details {
   margin-bottom: 80px;
   .text {
-    background: rgb(208, 221, 172);
+    background: $light-green;
     border-radius: 0 0 20px 20px;
     width: 60%;
     margin: 0 auto;
@@ -149,13 +139,71 @@ nav {
       font-size: 2em;
       padding: 5px 0;
     }
+    h5 {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 1.5em;
+      font-family: 'Expletus Sans', cursive;
+    }
     h3,p {
       padding: 10px 0;
+    }
+    input, textarea {
+      width: 80%;
     }
     button {
       width: 40%;
     }
   }
+}
+.answers {
+  width: 100%;
+  margin: 0 auto;
+  padding: 40px;
+  h1 {
+    text-align: center;
+    font-size: 3em;
+    border-top: 2px solid lightgrey;
+    padding: 30px;
+  }
+  h2 {
+    text-align: center;
+  }
+  button {
+    margin-top: 50px;
+    background: darken($light-green, 20%);
+  }
+  .buttons {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    margin: 0 auto;
+    button{
+      width: 30%;
+      margin-top: 10px;
+    }
+  }
+  .answer-tile {
+    border: 2px solid $light-green;
+    border-radius: 20px;
+    width: 50%;
+    margin: 30px auto;
+    padding: 50px;
+    button {
+      background: black;
+      margin-top: 30px;
+      width: 30%;
+    }
+  }
+
+}
+
+
+// Element Styles
+h1 {
+  font-family: 'Expletus Sans', cursive;
+  text-align: center;
+  font-size: 4em;
 }
 button {
   display: block;
@@ -171,4 +219,14 @@ button {
   &:hover {
     cursor: pointer;
   }
+}
+textarea,input {
+  margin: 20px auto;
+  display: block;
+  width: 40%;
+  height: 2em;
+  font-size: 1em;
+}
+textarea {
+  height: 100px;
 }

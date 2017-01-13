@@ -1,5 +1,5 @@
-<p>{{answer.author}}'s Answer</p>
-<h4>{{answer.content}}</h4>
+<h4>{{answer.author}}'s Answer:</h4>
+<p>{{answer.content}}</p>
 {{#if editAnswerForm}}
   <form>
     <label for="author">Author</label>
@@ -15,4 +15,3 @@
 {{else}}
 <button type="button" {{action 'editAnswer' answer}}>Edit Answer</button>
 {{/if}}
-<hr>

@@ -14,6 +14,9 @@ export default Ember.Component.extend({
       };
       this.set('editQuestion', false);
       this.sendAction('saveEdit', question, params);
+    },
+    cancel() {
+      this.set('editQuestion', false);
     }
   }
 });
