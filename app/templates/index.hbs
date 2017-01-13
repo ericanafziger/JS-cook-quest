@@ -1,5 +1,11 @@
-{{#each model as |question|}}
+{{#each model.questions as |question|}}
   <div class="question-tile">
     {{question-tile question=question}}
+  </div>
+{{/each}}
+
+{{#each model.answers as |answer|}}
+  <div class="answer-tile">
+    {{answer.content}}
   </div>
 {{/each}}
